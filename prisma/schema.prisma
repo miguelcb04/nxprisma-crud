@@ -8,10 +8,17 @@ generator client {
 //   directUrl = env("DIRECT_URL")
 // }
 
+// prisma/schema.prisma
 datasource db {
-  provider = "mysql"
-  url      = env("DATABASE_URL") 
+  provider  = "postgresql"
+  url  	    = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
 }
+
+//datasource db {
+//  provider = "mysql"
+//  url      = env("DATABASE_URL") 
+//}
 
 
 model Articulo {
